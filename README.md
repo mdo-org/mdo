@@ -94,5 +94,29 @@ Examples:
 - Install node.js (v8.14.0 preferred)
 - Install [lerna](https://github.com/lerna/lerna): `npm install -g lerna`
 - Run `lerna bootsrap` to install all dependencies
+
+### Running Tests
+
+```
+# Run all tests
+lerna run test
+
+# Run a single test
+lerna run test filename
+eg:
+  lerna run test default_flow.test.js
+
+# Run test using a debugger
+lerna run test-debug default_flow.test.js
+```
+
+### Linting / Formatting Code
+
+This project is configured to run [prettier](https://github.com/prettier/prettier) when you do a `git add` (using [husky](https://www.npmjs.com/package/husky) and [lint-staged](https://www.npmjs.com/package/lint-staged)), so you don't need to worry about formatting code.
+
+However, you can still use [tslint](https://palantir.github.io/tslint/) to help you catch errors while you code. The `tslint.json` file is set to extend [tslint-config-prettier](https://www.npmjs.com/package/tslint-config-prettier), so tslint will only report on syntax errors instead of enforcing formatting.
+
+### Building / Publishing the project
+
 - Run `lerna run build` to build all packages
-- Run `lerna run test` to test all packages
+- Run `npm run publish` to publish all packages
