@@ -1,11 +1,14 @@
 {
-  "name": "@mdo-org/mdo-core",
+  "name": "@mdo-org/mdo-cli",
   "version": "0.1.2",
-  "description": "Core logic for the MDo system.",
+  "description": "Terminal client for MDo.",
   "author": "Alexis Hevia <hevia.alexis@gmail.com>",
   "homepage": "https://github.com/mdo-org/mdo#readme",
   "license": "SEE LICENSE IN ../../LICENSE",
   "main": "lib/index.js",
+  "bin": {
+    "mdo": "./index.js"
+  },
   "directories": {
     "lib": "lib"
   },
@@ -16,14 +19,16 @@
     "type": "git",
     "url": "git+https://github.com/mdo-org/mdo.git"
   },
-  "bugs": {
-    "url": "https://github.com/mdo-org/mdo/issues"
-  },
   "scripts": {
     "prebuild": "rm -rf ./lib",
     "build": "tsc",
     "test": "tsc && jest",
     "test-debug": "node --inspect-brk=0.0.0.0:9229 ../../node_modules/.bin/jest"
   },
-  "gitHead": "4c6b52c4c44384badf00e5b09579a250b5fa816d"
+  "bugs": {
+    "url": "https://github.com/mdo-org/mdo/issues"
+  },
+  "dependencies": {
+    "@mdo-org/mdo-core": "^0.1.2"
+  }
 }
