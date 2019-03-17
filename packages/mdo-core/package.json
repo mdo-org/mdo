@@ -1,6 +1,6 @@
 {
   "name": "@mdo-org/mdo-core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Core logic for the MDo system.",
   "author": "Alexis Hevia <hevia.alexis@gmail.com>",
   "homepage": "https://github.com/mdo-org/mdo#readme",
