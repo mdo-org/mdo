@@ -25,5 +25,6 @@
     "build": "tsc",
     "test": "tsc && jest",
     "test-debug": "node --inspect-brk=0.0.0.0:9229 ./node_modules/.bin/jest"
-  }
+  },
+  "gitHead": "68c2aeabcc1377a43363f9bf69e36d9ee71cd4d3"
 }

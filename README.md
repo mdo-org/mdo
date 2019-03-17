@@ -119,4 +119,4 @@ However, you can still use [tslint](https://palantir.github.io/tslint/) to help 
 ### Building / Publishing the project
 
 - Run `lerna run build` to build all packages
-- Run `npm run publish` to publish all packages
+- Run `./bin/publish` to publish all packages

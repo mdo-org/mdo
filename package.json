@@ -31,8 +31,5 @@
       "prettier --write",
       "git add"
     ]
-  },
-  "scripts": {
-    "publish": "lerna run tsc && lerna publish"
   }
 }

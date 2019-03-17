@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -e # exit if any command fails
+
+lerna run build
+
+echo "Input your OTP token:"
+
+read NPM_CONFIG_OTP
+
+lerna publish
