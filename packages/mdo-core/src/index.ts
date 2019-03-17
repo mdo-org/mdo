@@ -1,4 +1,3 @@
-// TODO: remove this line
 import { MDoT, PluginT, PluginMapT } from "./types";
 import stream from "stream";
 

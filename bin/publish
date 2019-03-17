@@ -6,6 +6,8 @@ lerna run build
 
 echo "Input your OTP token:"
 
-read NPM_CONFIG_OTP
+read otp
+
+export NPM_CONFIG_OTP=$otp
 
 lerna publish
