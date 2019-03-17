@@ -93,4 +93,6 @@ Examples:
 
 - Install node.js (v8.14.0 preferred)
 - Install [lerna](https://github.com/lerna/lerna): `npm install -g lerna`
-- Run `lerna bootsrap`
+- Run `lerna bootsrap` to install all dependencies
+- Run `lerna run build` to build all packages
+- Run `lerna run test` to test all packages
