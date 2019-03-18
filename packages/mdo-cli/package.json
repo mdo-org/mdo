@@ -22,7 +22,6 @@
   },
   "dependencies": {
     "@mdo-org/mdo-core": "^0.1.5",
-    "pumpify": "^1.5.1",
     "yargs": "^13.2.2"
   }
 }

@@ -1,4 +1,3 @@
-const pumpify = require("pumpify");
 const MDo = require("@mdo-org/mdo-core");
 const printVer = require("./printVersion");
 
@@ -10,10 +9,7 @@ const run = ({ printVersion } = {}) => {
   const origin = process.stdin;
   const destination = process.stdout;
 
-  return pumpify(origin, MDo.transform(), destination).on("error", e => {
-    console.error(e.message);
-    process.exit(1);
-  });
+  return origin.pipe(MDo.transform()).pipe(destination);
 };
 
 module.exports = run;

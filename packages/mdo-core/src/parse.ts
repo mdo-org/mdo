@@ -19,7 +19,7 @@ const bufferToLines = () => {
       prevChars = `${prevChars}${chunk.toString()}`;
       const lines = prevChars.split("\n");
       const lastLine = lines.pop();
-      if (lastLine) {
+      if (typeof lastLine === "string") {
         prevChars = lastLine;
         lines.forEach(lineStr => this.push(Line.fromString(lineStr)));
       }
@@ -74,7 +74,7 @@ const parseTags = () => {
     transform(block, enc, callback) {
       try {
         let match;
-        while ((match = block.text.match(/@(\w+) ([^@]+)/))) {
+        while ((match = block.text.match(/@(\w+) ([^@\n]+)/))) {
           const [fullMatch, key, value] = match;
           const rightPadding = value.match(/\s*$/);
 

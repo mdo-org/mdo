@@ -202,6 +202,7 @@ a multiline comment
   @postpone until Wednesday
 - [ ] world
   @postpone until 2019-10-01 @repeat every month from complete
+  foobar
       `.trim();
       parsed = await runStringToBlockTransform(parse(), original);
     });
@@ -211,7 +212,7 @@ a multiline comment
         "{{type}} hello\n  {{start}}\n  {{postpone}}"
       );
       expect(parsed[1].text).toEqual(
-        "{{type}} world\n  {{postpone}} {{repeat}}"
+        "{{type}} world\n  {{postpone}} {{repeat}}\n  foobar"
       );
     });
 
