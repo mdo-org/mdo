@@ -12,6 +12,11 @@
   "files": [
     "lib"
   ],
+  "dependencies": {
+    "luxon": "^1.11.4",
+    "pumpify": "^1.5.1",
+    "xregexp": "^4.2.4"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mdo-org/mdo.git"

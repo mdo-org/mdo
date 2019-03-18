@@ -29,6 +29,8 @@
     "url": "https://github.com/mdo-org/mdo/issues"
   },
   "dependencies": {
-    "@mdo-org/mdo-core": "^0.1.3"
+    "@mdo-org/mdo-core": "^0.1.3",
+    "pumpify": "^1.5.1",
+    "yargs": "^13.2.2"
   }
 }

@@ -16,12 +16,7 @@
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.3.3333"
   },
-  "dependencies": {
-    "luxon": "^1.11.4",
-    "pumpify": "^1.5.1",
-    "xregexp": "^4.2.4",
-    "yargs": "^13.2.2"
-  },
+  "dependencies": {},
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
