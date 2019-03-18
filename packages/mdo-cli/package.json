@@ -7,7 +7,7 @@
   "license": "SEE LICENSE IN ../../LICENSE",
   "main": "lib/index.js",
   "bin": {
-    "mdo": "./index.js"
+    "mdo": "./lib/index.js"
   },
   "directories": {
     "lib": "lib"
