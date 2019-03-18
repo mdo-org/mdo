@@ -2,7 +2,7 @@
 
 set -e # exit if any command fails
 
-lerna run build
+lerna run build --parallel
 
 echo "Input your OTP token:"
 
