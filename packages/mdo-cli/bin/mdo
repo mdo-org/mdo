@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+const { argv } = require("yargs");
+const run = require('../src/index');
+
+run({
+  printVersion: !!argv.version
+});

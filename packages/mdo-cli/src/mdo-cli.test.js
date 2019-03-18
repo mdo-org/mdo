@@ -1,14 +1,14 @@
-import { mockProcessStdout } from "jest-mock-process";
-import cli from "./index";
+const { mockProcessStdout } = require("jest-mock-process");
+const run = require("./index");
 
 describe("mdo-cli", () => {
-  let result: string;
-  let mockStdout: any;
+  let result;
+  let mockStdou;
 
   describe("with --version param", () => {
     beforeEach(async () => {
       mockStdout = mockProcessStdout();
-      result = await cli({ printVersion: true });
+      result = await run({ printVersion: true });
     });
 
     afterEach(() => {

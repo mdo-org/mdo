@@ -1,11 +1,12 @@
 # `mdo-cli`
 
-> TODO: description
-
 ## Usage
 
 ```
-const mdoCli = require('mdo-cli');
+npm install -g @mdo-org/mdo-cli
 
-// TODO: DEMONSTRATE API
+echo '
+- [ ] hello world
+    @start tomorrow
+' | mdo
 ```

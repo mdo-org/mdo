@@ -1,2 +1,4 @@
-const rootConfig = require("../../jest.config");
-module.exports = rootConfig;
+module.exports = {
+  testEnvironment: "node",
+  testPathIgnorePatterns: ["/node_modules/", "__tests__/helpers.js"]
+};

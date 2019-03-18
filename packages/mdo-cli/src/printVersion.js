@@ -1,6 +1,6 @@
-import fs from "fs";
-import path from "path";
-import { promisify } from "util";
+const fs = require("fs");
+const path = require("path");
+const { promisify } = require("util");
 
 const fsReadFile = promisify(fs.readFile);
 
@@ -13,4 +13,4 @@ const printVersion = async () => {
   process.stdout.write(version);
 };
 
-export default printVersion;
+module.exports = printVersion;
