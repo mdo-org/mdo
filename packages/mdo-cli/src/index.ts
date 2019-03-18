@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
 import fs from "fs";
+import printVer from "./printVersion";
 const pumpify = require("pumpify");
 const MDo = require("@mdo-org/mdo-core");
 
 const { argv } = require("yargs");
-const printVer = require("./printVersion");
 
 type runArgsT = { printVersion: boolean };
 const run = (args: runArgsT | null) => {

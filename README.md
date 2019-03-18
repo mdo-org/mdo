@@ -99,15 +99,17 @@ Examples:
 
 ```
 # Run all tests
-lerna run test
+lerna run test --parallel
 
 # Run a single test
-lerna run test filename
+lerna run test -- <filename>
 eg:
-  lerna run test default_flow.test.js
+  lerna run test -- default_flow.test.js
 
 # Run test using a debugger
-lerna run test-debug default_flow.test.js
+lerna run test-debug --scope <packageName> -- <filename>
+eg:
+  lerna run test-debug --scope @mdo-org/mdo-cli -- mdo-cli.test
 ```
 
 ### Linting / Formatting Code
