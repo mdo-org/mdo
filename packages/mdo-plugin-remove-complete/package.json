@@ -1,0 +1,30 @@
+{
+  "name": "@mdo-org/mdo-plugin-remove-complete",
+  "version": "0.1.6",
+  "description": "Removes to-dos marked as complete from the stream.",
+  "author": "Alexis Hevia <hevia.alexis@gmail.com>",
+  "homepage": "https://github.com/mdo-org/mdo#readme",
+  "license": "SEE LICENSE IN ../../LICENSE",
+  "main": "lib/mdo-plugin-remove-complete.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdo-org/mdo.git"
+  },
+  "scripts": {
+    "test": "jest",
+    "test-debug": "node --inspect-brk=0.0.0.0:9229 ../../node_modules/.bin/jest"
+  },
+  "bugs": {
+    "url": "https://github.com/mdo-org/mdo/issues"
+  },
+  "dependencies": {
+    "@mdo-org/mdo-core": "^0.1.6"
+  }
+}
