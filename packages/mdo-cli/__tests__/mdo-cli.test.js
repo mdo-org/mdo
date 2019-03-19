@@ -1,5 +1,5 @@
 const { mockProcessStdout } = require("jest-mock-process");
-const run = require("./index");
+const run = require("..");
 
 describe("mdo-cli", () => {
   let result;

@@ -5,7 +5,14 @@
   "author": "Alexis Hevia <hevia.alexis@gmail.com>",
   "homepage": "https://github.com/mdo-org/mdo#readme",
   "license": "SEE LICENSE IN ../../LICENSE",
-  "main": "src/index.js",
+  "main": "lib/mdo-cli.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
   "bin": {
     "mdo": "./bin/mdo"
   },
