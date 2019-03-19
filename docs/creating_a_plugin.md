@@ -27,8 +27,16 @@
    },
    ```
 
-3. Write your plugin logic inside `packages/mdo-plugin-foo/lib/mdo-plugin-foo.js`.
+3. Add `mdo-core` as a dependency inside `package.json`:
 
-4. Write your tests inside `packages/mdo-plugin-foo/lib/mdo-plugin-foo.js`
+   ```
+   "dependencies": {
+     "@mdo-org/mdo-core": "^0.1.6"
+   }
+   ```
 
-5. Write your README inside `packages/mdo-plugin-foo/README`
+4. Write your README inside `packages/mdo-plugin-foo/README`
+
+5. Write your tests inside `packages/mdo-plugin-foo/lib/mdo-plugin-foo.js`
+
+6. Write your plugin logic inside `packages/mdo-plugin-foo/lib/mdo-plugin-foo.js`.

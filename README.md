@@ -116,7 +116,13 @@ eg:
 
 This project is configured to run [prettier](https://github.com/prettier/prettier) when you do a `git add` (using [husky](https://www.npmjs.com/package/husky) and [lint-staged](https://www.npmjs.com/package/lint-staged)), so you don't need to worry about formatting code.
 
-However, you can still use [tslint](https://palantir.github.io/tslint/) to help you catch errors while you code. The `tslint.json` file is set to extend [tslint-config-prettier](https://www.npmjs.com/package/tslint-config-prettier), so tslint will only report on syntax errors instead of enforcing formatting.
+However, you can still use [eslint](https://eslint.org/) to help you catch errors while you code. The `.eslintrc.json` file is set to extend [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier), so eslint will only report on syntax errors instead of enforcing formatting.
+
+Note:
+Some editors will fail to load eslint from a pacakage's subdirectory, and will default to the global eslint - which might not have all the plugins you need.
+You might need to manually specify the path to the correct `eslint` to use.
+In my case, I had to create a local `.vimrc` file with:
+`let g:syntastic_javascript_eslint_exec='/home/alexishevia/Projects/Personales/mdo/node_modules/.bin/eslint'`
 
 ### Building / Publishing the project
 
