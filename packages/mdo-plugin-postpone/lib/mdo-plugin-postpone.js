@@ -8,7 +8,6 @@ const parse = ({ time, timezone }) => {
   return new Transform({
     objectMode: true,
     transform(block, encoding, callback) {
-      debugger;
       try {
         if (block.postpone) {
           this.push({

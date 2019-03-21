@@ -4,28 +4,46 @@ The repeat plugin allows you to re-schedule completed to-dos so they show up aga
 
 It works by calculating a new `@start` value based on the `@repeat` tag's information.
 
-## Dependencies
+## Installation
 
-Depends on the [start](./start.md) plugin.
+```
+npm install --save @mdo-org/mdo-plugin-repeat
+```
 
-## Implementation Details
+## Usage
+
+```
+const repeat = require('@mdo-org/mdo-plugin-repeat');
+
+const time = "2019-04-01T00:00-05:00";
+const timezone = "America/Panama";
+
+mdoStream
+  .pipe((repeat.parse({ time, timezone })));
+  .pipe((repeat.process({ time, timezone })));
+  .pipe((repeat.stringify({ time, timezone })));
+```
+
+## Overview
 
 ### parse
 
 Converts the `.repeat` value from a string to an object with the following
 fields: `string`, `n`, `period`, `type`.
 
-The allowed formats are specified [here](./repeat_tag_formats.md).
+The allowed formats are specified [here](./allowed_formats.md).
 
 Example:
 
-```
-// given the following block object
-{
-    repeat: "every 10 days from complete"
-}
+given the following block object:
 
-// after parse
+```
+{ repeat: "every 10 days from complete" }
+```
+
+after parse:
+
+```
 {
     repeat: {
       string: 'every 10 days from complete',
@@ -57,8 +75,9 @@ Converts the `.repeat` value from an object back into a string.
 
 Example:
 
+given the following block object:
+
 ```
-// given the following block object
 {
     repeat: {
       string: 'every 10 days from complete',
@@ -67,9 +86,10 @@ Example:
       type: 'COMPLETE',
     }
 }
+```
 
-// after stringify
-{
-    repeat: 'every 10 days from complete',
-}
+after stringify:
+
+```
+{ repeat: 'every 10 days from complete' }
 ```

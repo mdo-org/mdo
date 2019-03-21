@@ -3,9 +3,8 @@ const { runBlockTransform } = require("@mdo-org/mdo-core/lib/testHelpers");
 
 describe("mdo-plugin-postpone", () => {
   describe("parse", () => {
-    const runAt = (time, timezone, postpone) => {
-      return runBlockTransform(parse({ time, timezone }), [{ postpone }]);
-    };
+    const runAt = (time, timezone, postpone) =>
+      runBlockTransform(parse({ time, timezone }), [{ postpone }]);
 
     let result;
 
