@@ -27,7 +27,7 @@
    },
    ```
 
-3. Add `mdo-core` as a dependency inside `package.json`:
+3. Add `mdo-core` as a dependency inside `package.json` (optional):
 
    ```
    "dependencies": {
