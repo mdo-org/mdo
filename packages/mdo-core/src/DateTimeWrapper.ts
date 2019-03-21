@@ -32,4 +32,4 @@ const DateTimeWrapper = (time: string, timezone: string): DateTimeWrapperT => ({
   }
 });
 
-export default DateTimeWrapper;
+export = DateTimeWrapper;
