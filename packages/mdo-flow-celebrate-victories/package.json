@@ -1,0 +1,37 @@
+{
+  "name": "@mdo-org/mdo-flow-celebrate-victories",
+  "version": "0.1.6",
+  "description": "Live in the moment, but every now and then take the time to cherish all that you've accomplished.",
+  "author": "Alexis Hevia <hevia.alexis@gmail.com>",
+  "homepage": "https://github.com/mdo-org/mdo#readme",
+  "license": "SEE LICENSE IN ../../LICENSE",
+  "main": "lib/mdo-flow-celebrate-victories.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdo-org/mdo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mdo-org/mdo/issues"
+  },
+  "scripts": {
+    "test": "jest",
+    "test-debug": "node --inspect-brk=0.0.0.0:9229 ../../node_modules/.bin/jest"
+  },
+  "dependencies": {
+    "@mdo-org/mdo-core": "^0.1.6",
+    "@mdo-org/mdo-plugin-start": "^0.1.6",
+    "@mdo-org/mdo-plugin-postpone": "^0.1.6",
+    "@mdo-org/mdo-plugin-repeat": "^0.1.6",
+    "@mdo-org/mdo-plugin-completed": "^0.1.6",
+    "@mdo-org/mdo-plugin-cleanup-actionable-dates": "^0.1.6",
+    "@mdo-org/mdo-plugin-sections": "^0.1.6",
+    "pumpify": "^1.5.1"
+  }
+}

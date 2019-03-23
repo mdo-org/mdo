@@ -54,7 +54,7 @@ describe("'Live in the Moment' flow", () => {
     // Next day, you run MDo again.
     // You notice your task now made it into a new 'Inbox' section
     time = "2018-09-04T06:00-05:00";
-    let result = await run();
+    const result = await run();
     expect(result.trim()).toEqual(
       `
 # Inbox

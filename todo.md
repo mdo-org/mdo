@@ -1,6 +1,7 @@
 # To-Do
 
 - [ ] split plugins / flows into separate modules using lerna
+  - add eslint as build process
   - move "test" scripts out of individual packages
 - [ ] modify flows so they spell out every specific transform they want to use in the order they want to use it
 - [ ] figure out how to get `.test` files out of npm packages
