@@ -1,8 +1,6 @@
 # "Live in the Moment" flow
 
-"Live in the Moment" is the default flow for MDo.
-
-It is based on the premise that to-dos can be split in two categories:
+"Live in the Moment" is based on the premise that to-dos can be split in two categories:
 
 1. Actionable: to-dos that can currently be worked on
 2. Unactionable: to-dos that will become actionable some time in the future
@@ -11,11 +9,16 @@ And it assumes you don't want to spend any time or mental energy dealing with un
 
 ## Workflow Overview
 
-Whenever you write down a to-do, ask yourself: can I work on this task right now or is it blocked by some external factor?
+Whenever you write down a to-do, ask yourself:  
+can I work on this task right now or is it blocked by some external factor?
 
-If it is NOT actionable, ask yourself: when will it become actionable? Then, assign it a corresponding @start date and forget about it.
+If it is NOT actionable, ask yourself:  
+when will it become actionable?
+
+Then, assign it a corresponding @start date and forget about it.
 
 Example:
+
 You start by writing down some to-dos:
 
 ```
@@ -24,7 +27,7 @@ You start by writing down some to-dos:
   See: github.com/my-project/issues/123
 ```
 
-However, you notice the first to-do is not actionable, because the report won't be ready until tomorrow at 11am.
+However, you notice the first to-do is not actionable, because the report XYZ won't be ready until tomorrow at 11am.
 
 You assign it a start date:
 
