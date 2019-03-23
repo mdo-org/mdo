@@ -28,7 +28,7 @@
     "url": "https://github.com/mdo-org/mdo/issues"
   },
   "dependencies": {
-    "@mdo-org/mdo-core": "^0.1.6",
+    "luxon": "^1.11.4",
     "yargs": "^13.2.2"
   }
 }

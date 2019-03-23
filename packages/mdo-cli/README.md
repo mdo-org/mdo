@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-npm install -g @mdo-org/mdo-cli
+npm install -g @mdo-org/mdo-cli @mdo-org/mdo-flow-live-in-the-moment
 ```
 
 ## Usage
@@ -12,5 +12,5 @@ npm install -g @mdo-org/mdo-cli
 echo '
 - [ ] hello world
     @start tomorrow
-' | mdo
+' | mdo --flow '@mdo-org/mdo-flow-live-in-the-moment'
 ```

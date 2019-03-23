@@ -1,8 +1,13 @@
 #!/usr/bin/env node
 
-const { argv } = require("yargs");
+const { flow } = require("yargs")
+  .option('flow', {
+    required: true,
+    description: 'name of the npm package to be used as an MDo flow',
+    type: 'string',
+  })
+  .example('echo "\n- [ ] take out trash\n\t@start tomorrow\n" | $0 --flow @mdo-org/mdo-flow-live-in-the-moment')
+  .argv;
 const run = require('..');
 
-run({
-  printVersion: !!argv.version
-});
+run({ flow });
