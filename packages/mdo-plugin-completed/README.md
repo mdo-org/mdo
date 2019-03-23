@@ -18,15 +18,15 @@ const timezone = "America/Panama";
 
 mdoStream
   .pipe(completed.process({ time, timezone }))
-  .pipe(completed.format({ time, timezone }))
+  .pipe(completed.stringify({ time, timezone }))
 ```
 
 ## Overview
 
 Adds a `.completed` timestamp to any completed to-do.
 
-- the `completed.process()` stream adds the timestamp in ISO-8601 format.
-- the `completed.format()` converts the ISO-8601 timestamp into MDo's standard date format.
+- `completed.process()` adds the timestamp in ISO-8601 format.
+- `completed.stringify()` converts the ISO-8601 timestamp into MDo's standard date format.
 
 Eg:
 
@@ -44,7 +44,7 @@ after completed.process(), the stream will emit
 { type: "COMPLETE_TASK", text: "{{type}} world", completed: '2019-01-20-17:34:00-05:00' }
 ```
 
-after completed.format(), the stream will emit
+after completed.stringify(), the stream will emit
 
 ```
 { type: "INCOMPLETE_TASK", text: "{{type}} hello" }

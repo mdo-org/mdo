@@ -15,7 +15,7 @@ const process = ({ time }) =>
     }
   });
 
-const format = ({ time, timezone }) =>
+const stringify = ({ time, timezone }) =>
   new Transform({
     objectMode: true,
     transform(block, encoding, callback) {
@@ -33,5 +33,5 @@ const format = ({ time, timezone }) =>
 
 module.exports = {
   process,
-  format
+  stringify
 };
