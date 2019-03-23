@@ -25,11 +25,28 @@ To-dos that have been completed
 - [X] xyz
 ```
 
-## Dependencies
+## Installation
 
-Depends on [start](./start.md) and [postpone](./postpone.md).
+```
+npm install --save @mdo-org/mdo-plugin-sections
+```
 
-## Implementation details
+## Usage
+
+```
+const postpone = require('@mdo-org/mdo-plugin-sections');
+
+const time = "2019-04-01T00:00-05:00";
+const timezone = "America/Panama";
+
+mdoStream
+  .pipe((postpone.parse({ time, timezone })))
+  .pipe((postpone.process({ time, timezone })))
+  .pipe((postpone.sort({ time, timezone })))
+  .pipe((postpone.stringify({ time, timezone })));
+```
+
+## Overview
 
 ### parse
 
@@ -59,7 +76,7 @@ Second process:
 
 To determine whether a block is actionable or not, we look at both the `.start` and `.postpone` values. If either of them is in the future, the block is considered NOT actionable.
 
-### reshuffle
+### sort
 
 Move all blocks to their corresponding sections, adding a header on top of each section:
 
@@ -67,3 +84,7 @@ Move all blocks to their corresponding sections, adding a header on top of each 
 - To-Do
 - Future
 - Done
+
+### stringify
+
+Removes the `.section` property from all blocks (to prevent MDo from rendering the section value as a tag).

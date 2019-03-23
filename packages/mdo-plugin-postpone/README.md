@@ -17,7 +17,7 @@ const time = "2019-04-01T00:00-05:00";
 const timezone = "America/Panama";
 
 mdoStream
-  .pipe((postpone.parse({ time, timezone })));
+  .pipe((postpone.parse({ time, timezone })))
   .pipe((postpone.stringify({ time, timezone })));
 ```
 
