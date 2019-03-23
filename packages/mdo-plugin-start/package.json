@@ -1,0 +1,34 @@
+{
+  "name": "@mdo-org/mdo-plugin-start",
+  "version": "0.1.6",
+  "description": "Allows setting a start date on to-dos, by using a `@start` tag.",
+  "author": "Alexis Hevia <hevia.alexis@gmail.com>",
+  "homepage": "https://github.com/mdo-org/mdo#readme",
+  "license": "SEE LICENSE IN ../../LICENSE",
+  "main": "lib/mdo-plugin-start.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdo-org/mdo.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/mdo-org/mdo/issues"
+  },
+  "scripts": {
+    "test": "jest",
+    "test-debug": "node --inspect-brk=0.0.0.0:9229 ../../node_modules/.bin/jest"
+  },
+  "dependencies": {
+    "@mdo-org/mdo-core": "^0.1.6",
+    "xregexp": "^4.2.4"
+  }
+}
