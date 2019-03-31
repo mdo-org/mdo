@@ -6,20 +6,18 @@
  * a buffer stream.
  */
 
-import parse from "./parse";
-import stringify from "./stringify";
-import { BlockT } from "./types";
-import {
+const { parse, stringify } = require("..");
+const {
   runStringToBlockTransform,
   runBlockToStringTransform
-} from "./testHelpers";
-import Block from "./BlockHelper";
+} = require("../lib/testHelpers");
+const Block = require("../lib/BlockHelper");
 
 const { COMPLETE_TASK, INCOMPLETE_TASK, COMMENT, PADDING } = Block.TYPES;
 
 describe("parse and stringify", () => {
-  let original: string;
-  let parsed: Array<BlockT>;
+  let original;
+  let parsed;
 
   beforeEach(() => {
     original = "";

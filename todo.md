@@ -9,5 +9,6 @@
 - [ ] improve 'docs' directory
       maybe use https://www.gitbook.com/ ?
 - [ ] create an interactive page / tutorial where you can try out MDo in the browser
-- [ ] use stricter types
-      For a lot of constants we're simply using type `string`. I'd like to convert these to `enum`.
+- [ ] make eslint happy
+      there are a couple places where I'm disabling eslint rules with /_ eslint ... _/
+      we should reconsider rewriting to make eslint happy

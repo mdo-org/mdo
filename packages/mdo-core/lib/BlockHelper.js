@@ -1,5 +1,4 @@
-import LineHelper from "./LineHelper";
-import { BlockT, BlockHelperT, LineT } from "./types";
+const LineHelper = require("./LineHelper");
 
 const LINE_TYPES = LineHelper.TYPES;
 
@@ -25,14 +24,14 @@ const blockTypeStringMap = new Map([
   [BLOCK_TYPES.PADDING, ""]
 ]);
 
-const BlockHelper: BlockHelperT = {
+const BlockHelper = {
   TYPES: BLOCK_TYPES,
 
-  isComplete: (block: BlockT): boolean => {
+  isComplete: block => {
     return block.type === BLOCK_TYPES.COMPLETE_TASK;
   },
 
-  isPadding: (block: BlockT): boolean => {
+  isPadding: block => {
     return block.type === BLOCK_TYPES.PADDING;
   },
 
@@ -41,8 +40,9 @@ const BlockHelper: BlockHelperT = {
    * appends a new line to the provided block object.
    * Important: Mutates the block!
    */
-  appendLine: (block: BlockT, line: LineT): void => {
+  appendLine: (block, line) => {
     const separator = block.text ? "\n" : "";
+    /* eslint no-param-reassign: [0] */
     block.text = `${block.text}${separator}${line.text}`;
   },
 
@@ -59,7 +59,7 @@ const BlockHelper: BlockHelperT = {
    *
    * Note: Does not mutate the block, always returns new block objects.
    */
-  splitByPadding: (block: BlockT): Array<BlockT> => {
+  splitByPadding: block => {
     const match = block.text && block.text.match(/(\s+)?$/);
     if (!match) {
       throw new Error(`Cannot splitByPadding the value: ${block.text}`);
@@ -78,7 +78,7 @@ const BlockHelper: BlockHelperT = {
    * Block.toString()
    * returns a block object as a human-readable string
    */
-  toString: (block: BlockT) => {
+  toString: block => {
     const typeAsString = blockTypeStringMap.get(block.type) || "";
     const text = block.text.replace("{{type}}", typeAsString);
     return Object.entries(block)
@@ -112,7 +112,7 @@ const BlockHelper: BlockHelperT = {
    * Note: returns null if the Line has type BODY and is not the first line
    */
 
-  fromLine: (line: LineT, { isFirstLine } = {}): BlockT | null => {
+  fromLine: (line, { isFirstLine } = {}) => {
     if (lineTypeBlockTypeMap.has(line.type)) {
       return {
         type: lineTypeBlockTypeMap.get(line.type) || "",
@@ -127,4 +127,4 @@ const BlockHelper: BlockHelperT = {
   }
 };
 
-export = BlockHelper;
+module.exports = BlockHelper;

@@ -1,10 +1,9 @@
-import { BlockT } from "./types";
-import { Readable, Transform } from "stream";
-import Block from "./BlockHelper";
+const { Readable } = require("stream");
 
 // Convert a string into a readable buffer stream, which emits one "chunk" at a
 // time. Each chunk is currently set to 5 characters.
-const stringToStream = (str: string): Readable =>
+const stringToStream = str =>
+  /* eslint no-param-reassign: [0] */
   new Readable({
     read(size = 5) {
       if (str.length) {
@@ -12,13 +11,13 @@ const stringToStream = (str: string): Readable =>
         str = str.slice(size);
         return this.push(chunk);
       }
-      this.push(null);
+      return this.push(null);
     }
   });
 
 // Convert an array of objects into an object stream, which emits one object
 // per event.
-const arrayToStream = (arr: Array<object>): Readable => {
+const arrayToStream = arr => {
   const len = arr.length;
   let i = 0;
   return new Readable({
@@ -36,10 +35,7 @@ const arrayToStream = (arr: Array<object>): Readable => {
 
 // Run the `input` string through the provided `transform` stream, then
 // return the output as a new string
-export const runStringTransform = (
-  transform: Transform,
-  input: string
-): Promise<string> =>
+const runStringTransform = (transform, input) =>
   new Promise((resolve, reject) => {
     let result = "";
     stringToStream(input.trim())
@@ -57,12 +53,9 @@ export const runStringTransform = (
 
 // Run the `input` string through the provided `transform` stream, then
 // collect the output as a new Block array
-export const runStringToBlockTransform = (
-  transform: Transform,
-  input: string
-): Promise<Array<BlockT>> =>
+const runStringToBlockTransform = (transform, input) =>
   new Promise((resolve, reject) => {
-    const result: Array<BlockT> = [];
+    const result = [];
     stringToStream(input.trim())
       .pipe(transform)
       .on("data", block => {
@@ -78,10 +71,7 @@ export const runStringToBlockTransform = (
 
 // Run the `input` Block array through the provided `transform` stream, then
 // collect the output as a new string
-export const runBlockToStringTransform = (
-  transform: Transform,
-  input: Array<BlockT>
-): Promise<string> =>
+const runBlockToStringTransform = (transform, input) =>
   new Promise((resolve, reject) => {
     let result = "";
     arrayToStream(input)
@@ -99,12 +89,9 @@ export const runBlockToStringTransform = (
 
 // Run the `input` Block array through the provided `transform` stream, then
 // collect the output as a new Block array
-export const runBlockTransform = (
-  transform: Transform,
-  input: Array<BlockT>
-): Promise<Array<BlockT>> =>
+const runBlockTransform = (transform, input) =>
   new Promise((resolve, reject) => {
-    const result: Array<BlockT> = [];
+    const result = [];
     arrayToStream(input)
       .pipe(transform)
       .on("data", block => {
@@ -118,18 +105,18 @@ export const runBlockTransform = (
       });
   });
 
-type validateBlockTransformOptions = {
-  input: Array<BlockT>;
-  expectedOutput: Array<BlockT>;
-};
-
 // Run the `input` Block array through the provided `transform` stream, then
 // collect the output as a new Block array, and compare against the
 // `expectedOutput`
-export const validateBlockTransform = (
-  transform: Transform,
-  { input, expectedOutput }: validateBlockTransformOptions
-) =>
+const validateBlockTransform = (transform, { input, expectedOutput }) =>
   runBlockTransform(transform, input).then(result =>
     expect(JSON.stringify(result)).toEqual(JSON.stringify(expectedOutput))
   );
+
+module.exports = {
+  runStringTransform,
+  runStringToBlockTransform,
+  runBlockToStringTransform,
+  runBlockTransform,
+  validateBlockTransform
+};

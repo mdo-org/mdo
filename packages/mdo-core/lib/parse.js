@@ -1,9 +1,7 @@
-import Block from "./BlockHelper";
-import { BlockT } from "./types";
-import Line from "./LineHelper";
-import { Transform } from "stream";
-
 const pumpify = require("pumpify");
+const { Transform } = require("stream");
+const Block = require("./BlockHelper");
+const Line = require("./LineHelper");
 
 // transforms a buffer stream into a Line objects stream
 const bufferToLines = () => {
@@ -15,7 +13,7 @@ const bufferToLines = () => {
     // in each chunk, look for newLine chars (`\n`).
     // Everything before a `\n` is a line, everything after a `\n` has to
     // be kept around until we find the next `\n`
-    transform(chunk: Buffer, encoding: string, callback: Function) {
+    transform(chunk, encoding, callback) {
       prevChars = `${prevChars}${chunk.toString()}`;
       const lines = prevChars.split("\n");
       const lastLine = lines.pop();
@@ -27,7 +25,7 @@ const bufferToLines = () => {
     },
 
     // if we have dangling chars at the end, those belong in a new line
-    flush(callback: Function) {
+    flush(callback) {
       this.push(Line.fromString(prevChars));
       callback();
     }
@@ -36,7 +34,7 @@ const bufferToLines = () => {
 
 // transforms a Line stream into a Block stream
 const linesToBlocks = () => {
-  let currentBlock: BlockT;
+  let currentBlock;
   return new Transform({
     objectMode: true,
 
@@ -57,7 +55,7 @@ const linesToBlocks = () => {
       if (currentBlock) {
         Block.appendLine(currentBlock, line);
       }
-      callback();
+      return callback();
     },
 
     flush(callback) {
@@ -74,6 +72,7 @@ const parseTags = () => {
     transform(block, enc, callback) {
       try {
         let match;
+        /* eslint no-cond-assign: [0], no-param-reassign: [0] */
         while ((match = block.text.match(/@(\w+) ([^@\n]+)/))) {
           const [fullMatch, key, value] = match;
           const rightPadding = value.match(/\s*$/);
@@ -97,7 +96,7 @@ const parseTags = () => {
         return callback(err);
       }
       this.push(block);
-      callback();
+      return callback();
     }
   });
 };
@@ -106,4 +105,4 @@ function parse() {
   return pumpify.obj(bufferToLines(), linesToBlocks(), parseTags());
 }
 
-export = parse;
+module.exports = parse;

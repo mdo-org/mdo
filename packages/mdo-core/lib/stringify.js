@@ -1,14 +1,13 @@
-import Block from "./BlockHelper";
-import { BlockT } from "./types";
-import { Transform } from "stream";
+const { Transform } = require("stream");
+const Block = require("./BlockHelper");
 
-function stringify(): Transform {
+function stringify() {
   let isFirst = true;
 
   return new Transform({
     objectMode: true,
 
-    transform(block: BlockT, enc: string, callback: Function) {
+    transform(block, enc, callback) {
       let separator = "\n";
       if (isFirst) {
         separator = "";
@@ -20,4 +19,4 @@ function stringify(): Transform {
   });
 }
 
-export = stringify;
+module.exports = stringify;

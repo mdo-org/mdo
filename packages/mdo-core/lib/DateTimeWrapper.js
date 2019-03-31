@@ -17,19 +17,18 @@
  * but 4pm in America/New_York
  */
 
-import { DateTime, DateTimeOptions } from "luxon";
-import { DateTimeWrapperT } from "./types";
+const { DateTime } = require("luxon");
 
-const DateTimeWrapper = (time: string, timezone: string): DateTimeWrapperT => ({
+const DateTimeWrapper = (time, timezone) => ({
   local: () => {
     const result = time ? DateTime.fromISO(time) : DateTime.local();
     return timezone ? result.setZone(timezone) : result;
   },
 
-  fromISO: (text: string, options?: DateTimeOptions): DateTime => {
+  fromISO: (text, options) => {
     const result = DateTime.fromISO(text, options);
     return timezone ? result.setZone(timezone) : result;
   }
 });
 
-export = DateTimeWrapper;
+module.exports = DateTimeWrapper;

@@ -1,7 +1,6 @@
-import { HookOptionsT } from "./types";
-import DateTimeWrapper from "./DateTimeWrapper";
+const DateTimeWrapper = require("./DateTimeWrapper");
 
-function normalizeDate(date: string, { time, timezone }: HookOptionsT): string {
+function normalizeDate(date, { time, timezone }) {
   const DateTime = DateTimeWrapper(time, timezone);
   const dateObj = DateTime.fromISO(date);
   let str = dateObj.toFormat("yyyy-LL-dd");
@@ -25,4 +24,4 @@ function normalizeDate(date: string, { time, timezone }: HookOptionsT): string {
   return str;
 }
 
-export = normalizeDate;
+module.exports = normalizeDate;
