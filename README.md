@@ -128,4 +128,8 @@ In my case, I had to create a local `.vimrc` file with:
 
 ### Publishing modules
 
-- Run `./bin/publish` to publish all packages
+Run the following to publish all packages:
+
+```
+NPM_CONFIG_OTP=your_npm_otp lerna publish
+```
