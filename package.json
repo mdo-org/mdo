@@ -24,7 +24,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "npm run lint && lerna run test --parallel"
+      "pre-push": "npm run lint && npm run test"
     }
   },
   "lint-staged": {
