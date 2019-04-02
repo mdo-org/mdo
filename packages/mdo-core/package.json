@@ -6,6 +6,9 @@
   "homepage": "https://github.com/mdo-org/mdo#readme",
   "license": "SEE LICENSE IN ../../LICENSE",
   "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -25,5 +28,5 @@
   "bugs": {
     "url": "https://github.com/mdo-org/mdo/issues"
   },
-  "gitHead": "4c6b52c4c44384badf00e5b09579a250b5fa816d"
+  "gitHead": "77b98912f94a71300a7698b805864683da29a45a"
 }

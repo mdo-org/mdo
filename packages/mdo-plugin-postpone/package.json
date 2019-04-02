@@ -6,6 +6,9 @@
   "homepage": "https://github.com/mdo-org/mdo#readme",
   "license": "SEE LICENSE IN ../../LICENSE",
   "main": "lib/mdo-plugin-postpone.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -23,5 +26,6 @@
   "dependencies": {
     "@mdo-org/mdo-core": "^0.2.0",
     "xregexp": "^4.2.4"
-  }
+  },
+  "gitHead": "77b98912f94a71300a7698b805864683da29a45a"
 }

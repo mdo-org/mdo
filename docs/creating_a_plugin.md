@@ -26,8 +26,16 @@
    }
    ```
 
-3. Write your README inside `packages/mdo-plugin-foo/README`
+3. Add a `publishConfig` to `package.json`
 
-4. Write your tests inside `packages/mdo-plugin-foo/__tests__/mdo-plugin-foo.test.js`
+   ```
+   "publishConfig": {
+     "access": "public"
+   }
+   ```
 
-5. Write your plugin logic inside `packages/mdo-plugin-foo/lib/mdo-plugin-foo.js`.
+4. Write your README inside `packages/mdo-plugin-foo/README`
+
+5. Write your tests inside `packages/mdo-plugin-foo/__tests__/mdo-plugin-foo.test.js`
+
+6. Write your plugin logic inside `packages/mdo-plugin-foo/lib/mdo-plugin-foo.js`.

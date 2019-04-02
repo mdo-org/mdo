@@ -6,6 +6,9 @@
   "homepage": "https://github.com/mdo-org/mdo#readme",
   "license": "SEE LICENSE IN ../../LICENSE",
   "main": "lib/mdo-flow-celebrate-victories.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -29,5 +32,6 @@
     "@mdo-org/mdo-plugin-sections": "^0.2.0",
     "@mdo-org/mdo-plugin-start": "^0.2.0",
     "pumpify": "^1.5.1"
-  }
+  },
+  "gitHead": "77b98912f94a71300a7698b805864683da29a45a"
 }

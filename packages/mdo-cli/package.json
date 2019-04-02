@@ -6,6 +6,9 @@
   "homepage": "https://github.com/mdo-org/mdo#readme",
   "license": "SEE LICENSE IN ../../LICENSE",
   "main": "lib/mdo-cli.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -26,5 +29,6 @@
   "dependencies": {
     "luxon": "^1.11.4",
     "yargs": "^13.2.2"
-  }
+  },
+  "gitHead": "77b98912f94a71300a7698b805864683da29a45a"
 }
