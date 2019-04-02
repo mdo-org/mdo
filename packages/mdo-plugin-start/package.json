@@ -1,6 +1,6 @@
 {
   "name": "@mdo-org/mdo-plugin-start",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "Allows setting a start date on to-dos, by using a `@start` tag.",
   "author": "Alexis Hevia <hevia.alexis@gmail.com>",
   "homepage": "https://github.com/mdo-org/mdo#readme",
@@ -21,7 +21,7 @@
     "url": "https://github.com/mdo-org/mdo/issues"
   },
   "dependencies": {
-    "@mdo-org/mdo-core": "^0.1.6",
+    "@mdo-org/mdo-core": "^0.2.0",
     "xregexp": "^4.2.4"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@mdo-org/mdo-cli",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "Terminal client for MDo.",
   "author": "Alexis Hevia <hevia.alexis@gmail.com>",
   "homepage": "https://github.com/mdo-org/mdo#readme",
