@@ -1,6 +1,5 @@
 # To-Do
 
-- [ ] convert all mdo-core files from typescript to javascript
 - [ ] split plugins / flows into separate modules using lerna
   - add eslint as build process
   - move "test" scripts out of individual packages

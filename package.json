@@ -16,10 +16,13 @@
     "prettier": "^1.16.4"
   },
   "dependencies": {},
+  "scripts": {
+    "lint": "eslint packages/*/lib/**/*.js"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "lerna run test --parallel"
+      "pre-push": "npm run lint && lerna run test --parallel"
     }
   },
   "lint-staged": {
