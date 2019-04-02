@@ -20,10 +20,6 @@
   "bugs": {
     "url": "https://github.com/mdo-org/mdo/issues"
   },
-  "scripts": {
-    "test": "jest",
-    "test-debug": "node --inspect-brk=0.0.0.0:9229 ../../node_modules/.bin/jest"
-  },
   "dependencies": {
     "@mdo-org/mdo-core": "^0.1.6",
     "@mdo-org/mdo-plugin-start": "^0.1.6",

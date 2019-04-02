@@ -17,10 +17,6 @@
     "type": "git",
     "url": "git+https://github.com/mdo-org/mdo.git"
   },
-  "scripts": {
-    "test": "jest",
-    "test-debug": "node --inspect-brk=0.0.0.0:9229 ../../node_modules/.bin/jest"
-  },
   "bugs": {
     "url": "https://github.com/mdo-org/mdo/issues"
   },

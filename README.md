@@ -99,32 +99,33 @@ Examples:
 
 ```
 # Run all tests
-lerna run test --parallel
+npm run test
 
 # Run a single test
-lerna run test -- <filename>
+npm run test <filename or path>
 eg:
-  lerna run test -- default_flow.test.js
+  npm run test mdo-core
 
 # Run test using a debugger
-lerna run test-debug --scope <packageName> -- <filename>
+npm run test-debug <filename>
 eg:
-  lerna run test-debug --scope @mdo-org/mdo-cli -- mdo-cli.test
+  npm run test-debug mdo-core
 ```
 
 ### Linting / Formatting Code
 
 This project is configured to run [prettier](https://github.com/prettier/prettier) when you do a `git add` (using [husky](https://www.npmjs.com/package/husky) and [lint-staged](https://www.npmjs.com/package/lint-staged)), so you don't need to worry about formatting code.
 
-However, you can still use [eslint](https://eslint.org/) to help you catch errors while you code. The `.eslintrc.json` file is set to extend [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier), so eslint will only report on syntax errors instead of enforcing formatting.
+However, we still use [eslint](https://eslint.org/) to capture syntax errors. The `.eslintrc.json` file is set to extend [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier), so eslint will only report on syntax errors instead of enforcing formatting.
 
 Note:
 Some editors will fail to load eslint from a pacakage's subdirectory, and will default to the global eslint - which might not have all the plugins you need.
-You might need to manually specify the path to the correct `eslint` to use.
+
+If that happens, you'll need to manually specify the path to the correct `eslint`.
+
 In my case, I had to create a local `.vimrc` file with:
 `let g:syntastic_javascript_eslint_exec='/home/alexishevia/Projects/Personales/mdo/node_modules/.bin/eslint'`
 
-### Building / Publishing the project
+### Publishing modules
 
-- Run `lerna run build --parallel` to build all packages
 - Run `./bin/publish` to publish all packages

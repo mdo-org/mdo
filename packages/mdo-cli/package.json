@@ -20,10 +20,6 @@
     "type": "git",
     "url": "git+https://github.com/mdo-org/mdo.git"
   },
-  "scripts": {
-    "test": "echo 0",
-    "test-debug": "echo 0"
-  },
   "bugs": {
     "url": "https://github.com/mdo-org/mdo/issues"
   },

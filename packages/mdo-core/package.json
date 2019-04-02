@@ -25,9 +25,5 @@
   "bugs": {
     "url": "https://github.com/mdo-org/mdo/issues"
   },
-  "scripts": {
-    "test": "jest",
-    "test-debug": "node --inspect-brk=0.0.0.0:9229 ../../node_modules/.bin/jest"
-  },
   "gitHead": "4c6b52c4c44384badf00e5b09579a250b5fa816d"
 }

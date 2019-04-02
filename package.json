@@ -17,7 +17,9 @@
   },
   "dependencies": {},
   "scripts": {
-    "lint": "eslint packages/*/lib/**/*.js"
+    "lint": "eslint packages/*/lib/**/*.js",
+    "test": "jest",
+    "test-debug": "node --inspect-brk=0.0.0.0:9229 ./node_modules/.bin/jest"
   },
   "husky": {
     "hooks": {

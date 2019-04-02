@@ -18,16 +18,7 @@
    license: (ISC) SEE LICENSE IN ../../LICENSE
    ```
 
-2. Update the `package.json`'s scripts section so it looks like this:
-
-   ```
-   "scripts": {
-     "test": "jest",
-     "test-debug": "node --inspect-brk=0.0.0.0:9229 ../../node_modules/.bin/jest"
-   },
-   ```
-
-3. Add `mdo-core` as a dependency inside `package.json` (optional):
+2. Add `mdo-core` as a dependency inside `package.json` (optional):
 
    ```
    "dependencies": {
@@ -35,8 +26,8 @@
    }
    ```
 
-4. Write your README inside `packages/mdo-plugin-foo/README`
+3. Write your README inside `packages/mdo-plugin-foo/README`
 
-5. Write your tests inside `packages/mdo-plugin-foo/lib/mdo-plugin-foo.js`
+4. Write your tests inside `packages/mdo-plugin-foo/__tests__/mdo-plugin-foo.test.js`
 
-6. Write your plugin logic inside `packages/mdo-plugin-foo/lib/mdo-plugin-foo.js`.
+5. Write your plugin logic inside `packages/mdo-plugin-foo/lib/mdo-plugin-foo.js`.
