@@ -60,6 +60,7 @@ const BlockHelper = {
    * Note: Does not mutate the block, always returns new block objects.
    */
   splitByPadding: block => {
+    if (block.text === "") return [block];
     const match = block.text && block.text.match(/(\s+)?$/);
     if (!match) {
       throw new Error(`Cannot splitByPadding the value: ${block.text}`);
@@ -120,8 +121,9 @@ const BlockHelper = {
       };
     }
     if (isFirstLine) {
-      // transform the first line into a comment block
-      return { type: LINE_TYPES.COMMENT, text: line.text };
+      // transform the first line into a comment or padding block
+      const type = line.text ? BLOCK_TYPES.COMMENT : BLOCK_TYPES.PADDING;
+      return { type, text: line.text };
     }
     return null;
   }

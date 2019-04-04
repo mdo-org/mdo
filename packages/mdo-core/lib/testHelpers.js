@@ -56,7 +56,7 @@ const runStringTransform = (transform, input) =>
 const runStringToBlockTransform = (transform, input) =>
   new Promise((resolve, reject) => {
     const result = [];
-    stringToStream(input.trim())
+    stringToStream(input)
       .pipe(transform)
       .on("data", block => {
         result.push(block);

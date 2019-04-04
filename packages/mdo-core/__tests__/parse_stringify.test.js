@@ -30,8 +30,8 @@ describe("parse and stringify", () => {
       parsed = await runStringToBlockTransform(parse(), original);
     });
 
-    test("returns an empty array with a comment Block", () =>
-      expect(parsed).toEqual([{ type: COMMENT, text: "" }]));
+    test("returns an array with a single padding Block", () =>
+      expect(parsed).toEqual([{ type: PADDING, text: "" }]));
 
     describe("stringify back", () => {
       test("returns the original string", async () => {
@@ -112,6 +112,30 @@ describe("parse and stringify", () => {
         { type: COMMENT, text: "{{type}} world" }
       ]);
     });
+
+    describe("stringify back", () => {
+      test("returns the original string", async () => {
+        expect(await runBlockToStringTransform(stringify(), parsed)).toEqual(
+          original
+        );
+      });
+    });
+  });
+
+  describe("parse files starting with an empty line", () => {
+    beforeEach(async () => {
+      original = `
+- [ ] hello
+- [ ] world`;
+      parsed = await runStringToBlockTransform(parse(), original);
+    });
+
+    it("converts the empty line to a padding block", () =>
+      expect(parsed).toEqual([
+        { type: PADDING, text: "" },
+        { type: INCOMPLETE_TASK, text: "{{type}} hello" },
+        { type: INCOMPLETE_TASK, text: "{{type}} world" }
+      ]));
 
     describe("stringify back", () => {
       test("returns the original string", async () => {
