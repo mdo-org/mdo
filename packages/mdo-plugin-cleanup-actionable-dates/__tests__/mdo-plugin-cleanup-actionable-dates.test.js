@@ -38,7 +38,7 @@ describe("mdo-plugin-cleanup-actionable-dates", () => {
     });
   });
 
-  describe("block with .start date in the past", () => {
+  describe("block with .start date in the past and no .start time", () => {
     const runTime = "2019-03-15T20:00-05:00";
     const start = "2019-03-01T00:00-05:00";
 
@@ -63,6 +63,47 @@ describe("mdo-plugin-cleanup-actionable-dates", () => {
           }
         ]);
         expect(result[0].start).toEqual(null);
+      });
+    });
+
+    describe("and .repeat from start", () => {
+      it("does nothing", async () => {
+        const result = await runAt(runTime, [
+          {
+            start,
+            repeat: { type: "START" }
+          }
+        ]);
+        expect(result[0].start).toEqual(start);
+      });
+    });
+  });
+
+  describe("block with .start date in the past and a .start time", () => {
+    const runTime = "2019-03-15T20:00-05:00";
+    const start = "2019-03-15T14:00-05:00";
+
+    describe("and no .repeat", () => {
+      it("sets .start to null", async () => {
+        const result = await runAt(runTime, [
+          {
+            start,
+            repeat: null
+          }
+        ]);
+        expect(result[0].start).toEqual(null);
+      });
+    });
+
+    describe("and .repeat from complete", () => {
+      it("does nothing", async () => {
+        const result = await runAt(runTime, [
+          {
+            start,
+            repeat: { type: "COMPLETE" }
+          }
+        ]);
+        expect(result[0].start).toEqual(start);
       });
     });
 

@@ -249,7 +249,7 @@ These are tasks I can complete while at home.
       `
 # Inbox
 - [ ] Take out trash
-    @repeat every day from complete
+    @repeat every day from complete @start 2018-09-01 at 8pm
 
 # Work
 These are tasks I can complete while at work
