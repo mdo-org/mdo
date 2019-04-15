@@ -35,13 +35,15 @@ This project is configured to run [prettier](https://github.com/prettier/prettie
 
 However, we still use [eslint](https://eslint.org/) to capture syntax errors. The `.eslintrc.json` file is set to extend [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier), so eslint will only report on syntax errors instead of enforcing formatting.
 
-Note:
+Note:  
 Some editors will fail to load eslint from a pacakage's subdirectory, and will default to the global eslint - which might not have all the plugins you need.
 
 If that happens, you'll need to manually specify the path to the correct `eslint`.
 
 In my case, I had to create a local `.vimrc` file with:
-`let g:syntastic_javascript_eslint_exec='/home/alexishevia/Projects/Personales/mdo/node_modules/.bin/eslint'`
+```
+let g:syntastic_javascript_eslint_exec='/home/alexishevia/Projects/Personales/mdo/node_modules/.bin/eslint'
+```
 
 ### Publishing modules
 
@@ -67,7 +69,7 @@ npm i docsify-cli -g
 docsify serve ./docs
 ```
 
-Note:
+Note:  
 Any PR that changes the core MDo architecture should also include updates to the Docsify documentation (to avoid code and docs going out of sync).
 
-Besides the "top level" documentation, every package should have its own independent `README` explaining how the package is used. This README will be exposed on the npmjs landing page for that package.
+Besides the "top level" documentation, every package should have its own independent `README` explaining how the package is used. The package-level `README` will be exposed on the npmjs landing page for that package.
