@@ -1,29 +1,29 @@
+<style>
+  #mdo-demo textarea {
+    width: 40%;
+    height: 15em;
+    padding-top: 0.5em;
+    line-height: 1.25em;
+  }
+  #mdo-demo textarea:first-child {
+    margin-right: 2%;
+  }
+  #mdo-demo button {
+    display: block;
+    margin-top: 0.5em;
+    width: 6em;
+    height: 2.1em;
+    outline: none;
+  }
+</style>
+
 # MDo
 
-MDo is a free, open source to-do app built to live inside your editor. It has
-support for:
+MDo is a free, open source to-do app built to live inside your editor.
 
-- multiline tasks
-- future tasks (including start times)
-- recurring tasks
-- markdown headers
+## Try it out
 
-And not much else. MDo's goal is to be as simple and intuitive as possible
-while helping you organize your tasks.
-
-## Principles
-
-- Plain text is the most portable format, so your todo system should use plain
-  text over a proprietary format.
-- Tasks usually contain a title and body, so your todo system should allow
-  multiline tasks.
-- You should be able to hide tasks you can't work on, until you can. Your todo
-  system should help you with future tasks and task recursion.
-- Priority is implicit in a text file (tasks at the top are higher priority),
-  so there is no need for your todo system to manage priorities for you.
-- Context can be easily added through markdown headers, so there is no need for
-  your todo system to manage context for you. It should merely respect
-  headers.
+<div id="mdo-demo"></div>
 
 ## How does it work
 
@@ -32,30 +32,30 @@ while helping you organize your tasks.
 
   - Any line that starts with `- [ ]` marks the start of an incomplete task
     block.
-  - Any line that starts with `- [x]` marks the start of a complete task
+  - Any line that starts with `- [X]` marks the start of a complete task
     block.
   - Any line that starts with `#` marks the start of a comment block.
 
-    Example:
+Example:
 
-    ```
-    # Home                                            | << Start of comment block
-    This content is considered part of the comment    |
-    block. Use it to keep any information you'd like  |
-    hanging around.                                   | >> End of comment block
-                                                      | <> Padding block
-    - [ ] Task title                                  | << Start of incomplete task
-      Any content below the task title is considered  |
-      the body of the task.                           |
-                                                      |
-      Feel free to use newlines, indentations, or any |
-      other format you prefer here.                   | >> End of incomplete task
-    - [x] Some other task                             | << Start of complete task
-      This task is considered complete.               | >> End of complete task
-                                                      | <> Padding block
-    # Work                                            | <> One-line comment block
-    - [ ] Do something                                | <> One-line task
-    ```
+```
+# Home                                            | << Start of comment block
+This content is considered part of the comment    |
+block. Use it to keep any information you'd like  |
+hanging around.                                   | >> End of comment block
+                                                  | <> Padding block
+- [ ] Task title                                  | << Start of incomplete task
+  Any content below the task title is considered  |
+  the body of the task.                           |
+                                                  |
+  Feel free to use newlines, indentations, or any |
+  other format you prefer here.                   | >> End of incomplete task
+- [X] Some other task                             | << Start of complete task
+  This task is considered complete.               | >> End of complete task
+                                                  | <> Padding block
+# Work                                            | <> One-line comment block
+- [ ] Do something                                | <> One-line task
+```
 
 ## Future and recurring tasks
 

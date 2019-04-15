@@ -48,8 +48,11 @@ In my case, I had to create a local `.vimrc` file with:
 Run the following to publish all packages:
 
 ```
-NPM_CONFIG_OTP=your_npm_otp lerna publish
+lerna version
+NPM_CONFIG_OTP=your_npm_otp lerna publish from-git
 ```
+
+See: https://github.com/lerna/lerna/issues/1643
 
 ### Documentation
 
