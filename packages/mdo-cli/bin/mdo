@@ -2,11 +2,12 @@
 
 const { flow } = require("yargs")
   .option('flow', {
-    required: true,
+    required: false,
     description: 'name of the npm package to be used as an MDo flow',
     type: 'string',
+    default: '@mdo-org/mdo-flow-live-in-the-moment',
   })
-  .example('echo "\n- [ ] take out trash\n\t@start tomorrow\n" | $0 --flow @mdo-org/mdo-flow-live-in-the-moment')
+  .example('echo "\n- [ ] take out trash\n\t@start tomorrow\n" | $0')
   .argv;
 const run = require('..');
 

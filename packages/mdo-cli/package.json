@@ -29,7 +29,8 @@
   },
   "dependencies": {
     "luxon": "^1.11.4",
-    "yargs": "^13.2.2"
+    "yargs": "^13.2.2",
+    "@mdo-org/mdo-flow-live-in-the-moment": "^0.2.3"
   },
   "gitHead": "77b98912f94a71300a7698b805864683da29a45a"
 }
