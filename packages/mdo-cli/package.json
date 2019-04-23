@@ -1,6 +1,6 @@
 {
   "name": "@mdo-org/mdo-cli",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "description": "Terminal client for MDo.",
   "author": "Alexis Hevia <hevia.alexis@gmail.com>",
   "homepage": "https://github.com/mdo-org/mdo#readme",
@@ -28,9 +28,9 @@
     "url": "https://github.com/mdo-org/mdo/issues"
   },
   "dependencies": {
+    "@mdo-org/mdo-flow-live-in-the-moment": "^0.2.3",
     "luxon": "^1.11.4",
-    "yargs": "^13.2.2",
-    "@mdo-org/mdo-flow-live-in-the-moment": "^0.2.3"
+    "yargs": "^13.2.2"
   },
   "gitHead": "77b98912f94a71300a7698b805864683da29a45a"
 }
