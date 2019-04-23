@@ -16,12 +16,12 @@
       repo: 'https://github.com/mdo-org/mdo',
       search: 'auto',
       auto2top: true,
-      loadSidebar: true,
       maxLevel: 4,
+      loadSidebar: true,
       subMaxLevel: 2,
       plugins: [
         function(hook, vm) {
-          hook.ready(function() {
+          hook.doneEach(function() {
             MDo.demo({ container: document.getElementById('mdo-demo') });
           })
         }

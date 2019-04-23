@@ -62,10 +62,10 @@ hanging around.                                   | >> End of comment block
 MDo supports adding metadata to your tasks by using tags.
 The following tags are supported:
 
-- `@start`: date/time when the task should start showing up in your actionable section.
+- `@start`: date/time when the task should start showing up in your "to-do" section.
 - `@repeat`: indicates how often the task should repeat.
 - `@postpone`: postpone lets you hide a task until a future time, without
-  modifying the @start value.  
+  modifying the `@start` value.  
    This is useful for those tasks that recur based on start date, but for some
   reason you can't work on at this moment.
 
@@ -80,3 +80,9 @@ Examples:
     @repeat every day from complete
     @postpone until Monday
 ```
+
+## Installation
+
+- [Vim](/installation/vim.md)
+- [Bash / Cli](/installation/cli.md)
+- [Other](/installation/other.md)
