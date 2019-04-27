@@ -25,7 +25,7 @@ No. I'm building it to "scratch my own itch".
 
 I'm not sure about the "always" part (the future has too many unknown unknowns).
 
-To be honest, I'm not even sure anyone other than me will even find MDo useful.
+To be honest, I'm not even sure anyone other than me will even find MDo useful. Hopefully you will :)
 
 However, I can say I currently don't have any intentions to make money from MDo. And if this ever changed, I'd probably still keep it as an open-source project.
 
