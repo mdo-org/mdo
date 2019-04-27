@@ -67,3 +67,5 @@ augroup mdo
   autocmd BufWritePre *todo/*.md call Preserve('%!mdo')
 augroup END
 ```
+
+[> Architecture](/architecture/)

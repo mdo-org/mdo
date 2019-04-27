@@ -19,11 +19,23 @@
       maxLevel: 4,
       loadSidebar: true,
       subMaxLevel: 2,
+      formatUpdated: '{YYYY}-{MM}-{DD}',
       plugins: [
-        function(hook, vm) {
+        function MDoDemo(hook, vm) {
           hook.doneEach(function() {
             MDo.demo({ container: document.getElementById('mdo-demo') });
           })
+        },
+        function LastModified(hook) {
+          var footer = [
+            '<hr/>',
+            '<footer style="text-align:right">',
+            '<span>last modified: {docsify-updated} </span>',
+            '</footer>'
+          ].join('');
+          hook.beforeEach(function(html) {
+            return html + footer;
+          });
         }
       ]
     };

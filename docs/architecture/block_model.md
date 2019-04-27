@@ -1,6 +1,6 @@
-# Block Objects
+# Block Model
 
-Block objects represent logical units inside a file.
+Block objects represent logical units inside an MDo file.
 
 MDo files are parsed into blocks:
 
@@ -10,26 +10,26 @@ MDo files are parsed into blocks:
   block.
 - Any line that starts with `#` marks the start of a comment block.
 
-  Example:
+Example:
 
-  ```
-  # Home                                            | << Start of comment block
-  This content is considered part of the comment    |
-  block. Use it to keep any information you'd like  |
-  hanging around.                                   | >> End of comment block
-                                                    | <> Padding block
-  - [ ] Task title                                  | << Start of incomplete task
-    Any content below the task title is considered  |
-    the body of the task.                           |
-                                                    |
-    Feel free to use newlines, indentations, or any |
-    other format you prefer here.                   | >> End of incomplete task
-  - [x] Some other task                             | << Start of complete task
-    This task is considered complete.               | >> End of complete task
-                                                    | <> Padding block
-  # Work                                            | <> One-line comment block
-  - [ ] Do something                                | <> One-line task
-  ```
+```
+# Home                                            | << Start of comment block
+This content is considered part of the comment    |
+block. Use it to keep any information you'd like  |
+hanging around.                                   | >> End of comment block
+                                                  | <> Padding block
+- [ ] Task title                                  | << Start of incomplete task
+  Any content below the task title is considered  |
+  the body of the task.                           |
+                                                  |
+  Feel free to use newlines, indentations, or any |
+  other format you prefer here.                   | >> End of incomplete task
+- [x] Some other task                             | << Start of complete task
+  This task is considered complete.               | >> End of complete task
+                                                  | <> Padding block
+# Work                                            | <> One-line comment block
+- [ ] Do something                                | <> One-line task
+```
 
 Block objects are Plain Old Javascript Objects (POJOs), with these attributes:
 
@@ -70,3 +70,5 @@ BlockHelper.splitByPadding(block);
   { type: 'PADDING', text: '\n\n' } ]
 ]
 ```
+
+[> The Line model](/architecture/line_model.md)

@@ -1,4 +1,4 @@
-# Line Objects
+# Line Model
 
 Line objects encapsulate a single line of text, and add some metadata to it.
 
@@ -27,3 +27,5 @@ const LineHelper = require('@mdo-org/mdo-core/dist/LineHelper');
 LineHelper.fromString('- [x] buy dog food')
 > { type: 'TITLE_COMPLETE', text: '{{type}} buy dog food' }
 ```
+
+[> Customize MDo](/customize/)

@@ -81,8 +81,4 @@ Examples:
     @postpone until Monday
 ```
 
-## Installation
-
-- [Vim](/installation/vim.md)
-- [Bash / Cli](/installation/cli.md)
-- [Other](/installation/other.md)
+[> Installation](/installation/)

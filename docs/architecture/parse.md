@@ -52,3 +52,5 @@ Whenever parse finds a "tag" (ie: a string starting with @foo):
 - the value is appended to the block object
 
 Example: "hello world @start today" -> `{ text: "hello world {{start}}", start: "today" }`
+
+[> stringify](/architecture/stringify.md)

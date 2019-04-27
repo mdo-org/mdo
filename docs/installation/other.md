@@ -26,6 +26,8 @@ Overall, the approach is the following:
    cp /tmp/myfile.md myfile.md
    ```
 
-If you tried to use MDo with your editor but couldn't figure out how, [hit me up](https://www.linkedin.com/in/alexishevia/) or [open a ticket](https://github.com/mdo-org/mdo/issues) and I'll try to help you out.
+If you tried to use MDo with your editor but couldn't figure out how, [hit me up](https://www.linkedin.com/in/alexishevia/) or [open a ticket](https://github.com/mdo-org/mdo/issues) and I'll try to help you.
 
-Better yet, if you figured out how to use MDo with your editor, [hit me up](https://www.linkedin.com/in/alexishevia/) or [open a ticket](https://github.com/mdo-org/mdo/issues) and I'll update the documentation with the steps you discovered.
+Better yet, if you figure out how to use MDo with your editor, [hit me up](https://www.linkedin.com/in/alexishevia/) or [open a ticket](https://github.com/mdo-org/mdo/issues) and I'll update this documentation with the steps you discovered.
+
+[> Architecture](/architecture/)

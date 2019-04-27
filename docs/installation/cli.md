@@ -9,3 +9,5 @@
    ```
    echo '- [ ] hello world @start tomorrow' | mdo
    ```
+
+[> Architecture](/architecture/)
