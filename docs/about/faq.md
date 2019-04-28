@@ -33,18 +33,6 @@ However, I can say I currently don't have any intentions to make money from MDo.
 
 YES! See: [Contribute to MDo](/about/contribute.md)
 
-## Are you looking for work?
-
-Not really. I'm always open to hearing proposals (here is my [linkedin](https://www.linkedin.com/in/alexishevia/)), BUT if you're a recruiter keep in mind you have big shoes to fill.
-
-I currently enjoy:
-
-- Working from anywhere in the world.
-- Interesting projects with tons of real-world users.
-- A competitive salary.
-- Good work/life balance.
-- Colleagues that feel more like friends and family, despite all of us being remote.
-
 ## I have another question
 
 Please [create a new issue](https://github.com/mdo-org/mdo/issues/new) on MDo's github.
