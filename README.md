@@ -4,6 +4,13 @@ MDo is a free, open source to-do app built to live inside your editor.
 
 Read the full documentation: https://mdo-org.github.io/mdo/
 
+This is the monorepo for the MDo project. It contains:
+
+- mdo-core
+- mdo-cli
+- "official" flows
+- "official" plugins
+
 ## Development Info
 
 ### Getting Started
@@ -41,6 +48,7 @@ Some editors will fail to load eslint from a pacakage's subdirectory, and will d
 If that happens, you'll need to manually specify the path to the correct `eslint`.
 
 In my case, I had to create a local `.vimrc` file with:
+
 ```
 let g:syntastic_javascript_eslint_exec='/home/alexishevia/Projects/Personales/mdo/node_modules/.bin/eslint'
 ```
