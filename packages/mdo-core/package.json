@@ -10,7 +10,9 @@
     "access": "public"
   },
   "scripts": {
-    "build": "npx webpack --entry ./src/index.js -o ./lib/index.js --mode production"
+    "buildMain": "npx webpack --entry ./src/index.js -o ./lib/index.js --mode production",
+    "buildStrings": "npx webpack --entry ./src/strings/index.js -o ./lib/strings/index.js --mode production",
+    "build": "npm run buildMain && npm run buildStrings"
   },
   "directories": {
     "lib": "lib",
