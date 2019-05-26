@@ -10,10 +10,8 @@
   And today is 2019-04-15 at 3pm (any time before 5pm)
   I want the next @start date to be today (2019-04-15) at 5pm, but MDo is
   calculating it to be tomorrow (2019-04-15) at 5pm.
-- [ ] feature request: add a new `# Tomorrow` section before `# Future`
-- [ ] improve landing page
-  - add a 'How to use' or 'How to install' section with instructions for different editors
-  - add in-depth documentation (most of it is already written in the docs folder, just need to clean up and expose it)
+- [ ] update README to use good-old `lerna publish` (test to see if it works first)
+      see: https://github.com/lerna/lerna/pull/2084
 - [ ] make eslint happy
       there are a couple places where I'm disabling eslint rules with /_ eslint ... _/
       we should reconsider rewriting to make eslint happy
