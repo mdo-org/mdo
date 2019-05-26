@@ -6,12 +6,12 @@
  * a buffer stream.
  */
 
-const { parse, stringify } = require("..");
+const { parse, stringify } = require("../src");
 const {
   runStringToBlockTransform,
   runBlockToStringTransform
-} = require("../lib/testHelpers");
-const Block = require("../lib/BlockHelper");
+} = require("../src/testHelpers");
+const Block = require("../src/BlockHelper");
 
 const { COMPLETE_TASK, INCOMPLETE_TASK, COMMENT, PADDING } = Block.TYPES;
 

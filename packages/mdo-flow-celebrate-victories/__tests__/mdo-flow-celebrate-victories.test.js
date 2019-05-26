@@ -1,5 +1,5 @@
 const celebrateVictories = require("..");
-const { runStringTransform } = require("@mdo-org/mdo-core/lib/testHelpers");
+const { runStringTransform } = require("@mdo-org/mdo-core/src/testHelpers");
 
 describe("'Celebrate Victories' flow", () => {
   let time;

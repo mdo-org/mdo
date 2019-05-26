@@ -1,6 +1,6 @@
 const { process, stringify } = require("..");
-const { TYPES } = require("@mdo-org/mdo-core/lib/BlockHelper");
-const { validateBlockTransform } = require("@mdo-org/mdo-core/lib/testHelpers");
+const { TYPES } = require("@mdo-org/mdo-core/src/BlockHelper");
+const { validateBlockTransform } = require("@mdo-org/mdo-core/src/testHelpers");
 
 const time = "2019-01-04T20:15-05:00";
 const timezone = "America/Panama";

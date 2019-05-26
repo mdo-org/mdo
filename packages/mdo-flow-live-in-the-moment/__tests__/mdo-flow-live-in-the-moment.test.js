@@ -1,5 +1,5 @@
 const liveInTheMoment = require("..");
-const { runStringTransform } = require("@mdo-org/mdo-core/lib/testHelpers");
+const { runStringTransform } = require("@mdo-org/mdo-core/src/testHelpers");
 
 describe("'Live in the Moment' flow", () => {
   let time;

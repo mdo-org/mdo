@@ -1,5 +1,5 @@
 const pumpify = require("pumpify");
-const MDo = require("@mdo-org/mdo-core");
+const MDo = require("@mdo-org/mdo-core/src");
 
 const start = require("@mdo-org/mdo-plugin-start");
 const postpone = require("@mdo-org/mdo-plugin-postpone");

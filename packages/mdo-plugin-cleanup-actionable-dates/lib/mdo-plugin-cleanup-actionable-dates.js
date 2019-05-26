@@ -1,5 +1,5 @@
 const { Transform } = require("stream");
-const DateTimeWrapper = require("@mdo-org/mdo-core/lib/DateTimeWrapper");
+const DateTimeWrapper = require("@mdo-org/mdo-core/src/DateTimeWrapper");
 
 const cleanupActionableDates = ({ time, timezone }) => {
   const now = new Date(time);

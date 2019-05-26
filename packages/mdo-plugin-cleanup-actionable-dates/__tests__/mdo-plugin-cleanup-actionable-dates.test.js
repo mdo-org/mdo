@@ -1,5 +1,5 @@
 const cleanupActionableDates = require("..");
-const { runBlockTransform } = require("@mdo-org/mdo-core/lib/testHelpers");
+const { runBlockTransform } = require("@mdo-org/mdo-core/src/testHelpers");
 
 describe("mdo-plugin-cleanup-actionable-dates", () => {
   const runAt = (time, blocks) =>

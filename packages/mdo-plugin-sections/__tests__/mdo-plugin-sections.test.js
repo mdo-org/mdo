@@ -1,8 +1,8 @@
 const { parse, process, sort } = require("..");
-const { runBlockTransform } = require("@mdo-org/mdo-core/lib/testHelpers");
+const { runBlockTransform } = require("@mdo-org/mdo-core/src/testHelpers");
 const {
   TYPES: { COMPLETE_TASK, INCOMPLETE_TASK, COMMENT, PADDING }
-} = require("@mdo-org/mdo-core/lib/BlockHelper");
+} = require("@mdo-org/mdo-core/src/BlockHelper");
 
 describe("mdo-plugin-sections", () => {
   let result;

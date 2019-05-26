@@ -1,6 +1,6 @@
 const removeComplete = require("..");
-const { validateBlockTransform } = require("@mdo-org/mdo-core/lib/testHelpers");
-const { TYPES } = require("@mdo-org/mdo-core/lib/BlockHelper");
+const { validateBlockTransform } = require("@mdo-org/mdo-core/src/testHelpers");
+const { TYPES } = require("@mdo-org/mdo-core/src/BlockHelper");
 
 describe("mdo-plugin-remove-complete", () => {
   it("removes complete blocks from the stream", () =>

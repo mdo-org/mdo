@@ -1,6 +1,6 @@
 const { Transform } = require("stream");
-const DateTimeWrapper = require("@mdo-org/mdo-core/lib/DateTimeWrapper");
-const normalizeDate = require("@mdo-org/mdo-core/lib/normalizeDate");
+const DateTimeWrapper = require("@mdo-org/mdo-core/src/DateTimeWrapper");
+const normalizeDate = require("@mdo-org/mdo-core/src/normalizeDate");
 const parser = require("./parser");
 
 const parse = ({ time, timezone }) => {

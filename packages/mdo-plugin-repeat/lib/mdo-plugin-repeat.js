@@ -1,6 +1,6 @@
 const { Transform } = require("stream");
-const BlockHelper = require("@mdo-org/mdo-core/lib/BlockHelper");
-const DateTimeWrapper = require("@mdo-org/mdo-core/lib/DateTimeWrapper");
+const BlockHelper = require("@mdo-org/mdo-core/src/BlockHelper");
+const DateTimeWrapper = require("@mdo-org/mdo-core/src/DateTimeWrapper");
 const { VALID_REPEAT_TYPES } = require("./constants");
 const parser = require("./parser");
 

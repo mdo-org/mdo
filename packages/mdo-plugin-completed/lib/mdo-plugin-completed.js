@@ -1,6 +1,6 @@
 const { Transform } = require("stream");
-const BlockHelper = require("@mdo-org/mdo-core/lib/BlockHelper");
-const normalizeDate = require("@mdo-org/mdo-core/lib/normalizeDate");
+const BlockHelper = require("@mdo-org/mdo-core/src/BlockHelper");
+const normalizeDate = require("@mdo-org/mdo-core/src/normalizeDate");
 
 const process = ({ time }) =>
   new Transform({

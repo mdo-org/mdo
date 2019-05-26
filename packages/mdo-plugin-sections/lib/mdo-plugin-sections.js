@@ -1,8 +1,8 @@
 /* eslint no-param-reassign: [0] */
 
 const { Transform } = require("stream");
-const BlockHelper = require("@mdo-org/mdo-core/lib/BlockHelper");
-const DateTimeWrapper = require("@mdo-org/mdo-core/lib/DateTimeWrapper");
+const BlockHelper = require("@mdo-org/mdo-core/src/BlockHelper");
+const DateTimeWrapper = require("@mdo-org/mdo-core/src/DateTimeWrapper");
 
 const { COMPLETE_TASK, INCOMPLETE_TASK, COMMENT, PADDING } = BlockHelper.TYPES;
 

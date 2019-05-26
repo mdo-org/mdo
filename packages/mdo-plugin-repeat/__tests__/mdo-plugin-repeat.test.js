@@ -1,6 +1,6 @@
 const { parse, process, stringify } = require("..");
-const { runBlockTransform } = require("@mdo-org/mdo-core/lib/testHelpers");
-const Block = require("@mdo-org/mdo-core/lib/BlockHelper");
+const { runBlockTransform } = require("@mdo-org/mdo-core/src/testHelpers");
+const Block = require("@mdo-org/mdo-core/src/BlockHelper");
 
 describe("mdo-plugin-repeat", () => {
   describe("parse", () => {

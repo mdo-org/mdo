@@ -1,5 +1,5 @@
 const { Transform } = require("stream");
-const BlockHelper = require("@mdo-org/mdo-core/lib/BlockHelper");
+const BlockHelper = require("@mdo-org/mdo-core/src/BlockHelper");
 
 const removeComplete = () =>
   new Transform({

@@ -1,5 +1,5 @@
 const { parse, stringify } = require("..");
-const { runBlockTransform } = require("@mdo-org/mdo-core/lib/testHelpers");
+const { runBlockTransform } = require("@mdo-org/mdo-core/src/testHelpers");
 
 describe("mdo-plugin-postpone", () => {
   describe("parse", () => {

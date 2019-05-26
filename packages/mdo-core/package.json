@@ -9,6 +9,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "scripts": {
+    "build": "npx webpack --entry ./src/index.js -o ./lib/index.js --mode production"
+  },
   "directories": {
     "lib": "lib",
     "test": "__tests__"
