@@ -10,5 +10,5 @@ parse('- [ ] hello world').then(blocks => console.log(blocks));
 
 stringify([
   { type: 'INCOMPLETE_TASK', text: '{{type}} hello world'}
-]).then(str => console.log)
+]).then(console.log)
 ```
