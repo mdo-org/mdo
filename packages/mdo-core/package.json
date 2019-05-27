@@ -10,8 +10,8 @@
     "access": "public"
   },
   "scripts": {
-    "buildMain": "npx webpack --entry ./src/index.js -o ./lib/index.js --mode production --output-library-target commonjs",
-    "buildStrings": "npx webpack --entry ./src/strings/index.js -o ./lib/strings/index.js --mode production --output-library-target commonjs",
+    "buildMain": "npx webpack --entry ./src/index.js -o ./lib/index.js --mode production --output-library-target commonjs-module",
+    "buildStrings": "npx webpack --entry ./src/strings/index.js -o ./lib/strings/index.js --mode production --output-library-target commonjs-module",
     "build": "npm run buildMain && npm run buildStrings"
   },
   "directories": {
