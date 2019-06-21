@@ -4,3 +4,4 @@ npm-debug.log
 .idea
 .vimrc
 packages/mdo-core/lib
+packages/mdo-flow-live-in-the-moment/lib

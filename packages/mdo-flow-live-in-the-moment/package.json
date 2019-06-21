@@ -5,9 +5,14 @@
   "author": "Alexis Hevia <hevia.alexis@gmail.com>",
   "homepage": "https://github.com/mdo-org/mdo#readme",
   "license": "SEE LICENSE IN ../../LICENSE",
-  "main": "lib/mdo-flow-live-in-the-moment.js",
+  "main": "lib/index.js",
   "publishConfig": {
     "access": "public"
+  },
+  "scripts": {
+    "buildMain": "npx webpack --entry ./src/index.js -o ./lib/index.js --mode production --output-library-target commonjs-module",
+    "buildStrings": "npx webpack --entry ./src/strings/index.js -o ./lib/strings/index.js --mode production --output-library-target commonjs-module",
+    "build": "npm run buildMain && npm run buildStrings"
   },
   "directories": {
     "lib": "lib",
