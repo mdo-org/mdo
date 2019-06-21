@@ -7,6 +7,29 @@
 
 And it assumes you don't want to spend any time or mental energy dealing with unactionable to-dos.
 
+## Usage
+
+```
+const { DateTime } = require("luxon");
+const now = DateTime.local();
+const options = { time: now.toString(), timezone: now.zoneName };
+
+// stream mode
+const liveInTheMoment = require('@mdo-org/mdo-flow-live-in-the-moment');
+
+fs.createReadStream('./myfile.md')
+.pipe(liveInTheMoment(options))
+.pipe(process.stdout);
+
+// string mode
+const liveInTheMomentStr = require('@mdo-org/mdo-flow-live-in-the-moment/strings');
+const inputStr = '- [ ] hello world @start tomorrow';
+
+liveInTheMomentStr(inputStr, options)
+.then(console.log)
+.catch(console.error);
+```
+
 ## Workflow Overview
 
 Whenever you write down a to-do, ask yourself:  

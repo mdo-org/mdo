@@ -9,7 +9,7 @@
 Steps:
 
 1. Rename the `lib` folder to `src`
-2. Add the `lib` folder of that package to `.gitignore`
+2. Add a `src/strings` directory with a string-friendly API (as opposed to stream-based API).
 3. Add `scripts` to `package.json`:
 
 ```
@@ -20,7 +20,8 @@ Steps:
 },
 ```
 
-4. Add a `src/strings` directory with a string-friendly API (as opposed to stream-based API).
+4. Add the `lib` folder of that package to `.gitignore`
+5. Add the `lib` folder of that package to `.eslintignore`
 
 - [ ] bug: recurring date with time
       If I have the following completed to-do:

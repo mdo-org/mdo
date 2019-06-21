@@ -1,1 +1,2 @@
 packages/mdo-core/lib/**/*.js
+packages/mdo-flow-live-in-the-moment/lib/**/*.js
