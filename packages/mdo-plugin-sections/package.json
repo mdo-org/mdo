@@ -1,6 +1,6 @@
 {
   "name": "@mdo-org/mdo-plugin-sections",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "description": "Organizes to-dos into sections.",
   "author": "Alexis Hevia <hevia.alexis@gmail.com>",
   "homepage": "https://github.com/mdo-org/mdo#readme",
@@ -24,7 +24,7 @@
     "url": "https://github.com/mdo-org/mdo/issues"
   },
   "dependencies": {
-    "@mdo-org/mdo-core": "^0.2.10"
+    "@mdo-org/mdo-core": "^0.2.11"
   },
   "gitHead": "77b98912f94a71300a7698b805864683da29a45a"
 }
