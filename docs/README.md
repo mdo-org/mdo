@@ -21,6 +21,10 @@
 
 MDo is a free, open source to-do app built to live inside your editor.
 
+<a href="https://www.youtube.com/watch?v=kUKnBZfdXbY" target="_blank">
+  <img src="hero.png" width="630px" height="180px" />
+</a>
+
 ## Try it out
 
 <div id="mdo-demo"></div>

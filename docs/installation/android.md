@@ -1,21 +1,11 @@
 # How to set up MDo on Android
 
-There is no official Android app yet.
+The MDo Android app lets you edit your MDo files and sync them using Dropbox.
 
-However, this is how I sync my MDo files to Android:
+You can access the app through Expo here:  
+https://expo.io/@alexishevia/mdo
 
-1. Find a text editor with markdown and Dropbox support. (I use [iA Writer](https://play.google.com/store/apps/details?id=net.ia.iawriter&hl=en))
-2. Move all MDo files to Dropbox.
-3. Profit.
+Or you can download the APK here:  
+https://drive.google.com/file/d/1YuOIyvkzrbwYJUgwBKI0tmca4EYGl1nL/view?usp=sharing
 
-This setup allows me to:
-
-- see my to-dos on the go
-- edit to-dos or mark them as complete
-- create new to-dos
-
-However, I have to wait until I'm back on my computer to actually _process_ the file (remove done to-dos, automatically move stuff between sections, etc).
-
-It's not too bad, but I'm hoping to build an MDo Android app in the near future to make it better.
-
-[> Architecture](/architecture/)
+PS: I'm in the process of getting it submitted to the Google Play Store.
