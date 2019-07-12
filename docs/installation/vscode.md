@@ -9,14 +9,14 @@ Or directly in VS Code:
 2. Type: "Extensions: Install Extensions"
 3. Type: "MDo"
 
-<img src="/installation/vscode_install_mdo.png" />
+<img src="vscode_install_mdo.png" />
 
 Once installed, you can run MDo on the current file by:
 
 1. Opening the command palette (Control+Shift+P)
 2. Typing "Run MDo"
 
-<img src="/installation/vscode_run_mdo.png" />
+<img src="vscode_run_mdo.png" />
 
 Optionally, you can add some keybindings to your `keybindings.json` file:
 
