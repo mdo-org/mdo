@@ -22,7 +22,7 @@ fs.createReadStream('./myfile.md')
 .pipe(process.stdout);
 
 // string mode
-const liveInTheMomentStr = require('@mdo-org/mdo-flow-live-in-the-moment/strings');
+const liveInTheMomentStr = require('@mdo-org/mdo-flow-live-in-the-moment/lib/strings');
 const inputStr = '- [ ] hello world @start tomorrow';
 
 liveInTheMomentStr(inputStr, options)
