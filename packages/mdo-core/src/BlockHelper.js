@@ -105,7 +105,6 @@ const BlockHelper = {
       .trim();
   },
 
-  // static fromLine: (line: Line, options: { isFirstLine?: boolean }) => BlockT | null;
   /*
    * Block.fromLine()
    *
@@ -126,6 +125,23 @@ const BlockHelper = {
       return { type, text: line.text };
     }
     return null;
+  },
+
+  /*
+   * Block.fromString
+   *
+   * create a new block object from a string
+   * Note: does not extract tags
+   */
+  fromString: str => {
+    const [firstLine, ...rest] = str.split("\n");
+    const block = BlockHelper.fromLine(LineHelper.fromString(firstLine), {
+      isFirstLine: true
+    });
+    rest.forEach(lineStr => {
+      BlockHelper.appendLine(block, LineHelper.fromString(lineStr));
+    });
+    return block;
   }
 };
 

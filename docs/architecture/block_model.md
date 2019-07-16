@@ -54,21 +54,18 @@ Examples:
 
 ```
 const { BlockHelper } = require('@mdo-org/mdo-core');
-const { INCOMPLETE_TASK } = BlockHelper.TYPES;
+const { COMPLETE_TASK, INCOMPLETE_TASK } = BlockHelper.TYPES;
 
-const block = { type: INCOMPLETE_TASK, text: '{{type}} Take out the trash\n\n' };
+const block = BlockHelper.fromString('- [ ] Take out the trash')
+> { type: INCOMPLETE_TASK, text: '{{type}} Take out the trash' };
 
 BlockHelper.isComplete(block);
 > false
 
-BlockHelper.toString(block);
-> "- [ ] Take out the trash\n\n";
+block.type = COMPLETE_TASK;
 
-BlockHelper.splitByPadding(block);
-> [
-  { type: 'INCOMPLETE_TASK', text: '{{type}} Take out the trash' },
-  { type: 'PADDING', text: '\n\n' } ]
-]
+BlockHelper.toString(block);
+> "- [X] Take out the trash";
 ```
 
 [> The Line model](/architecture/line_model.md)

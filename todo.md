@@ -38,3 +38,4 @@ Steps:
 - [ ] make eslint happy
       there are a couple places where I'm disabling eslint rules with /_ eslint ... _/
       we should reconsider rewriting to make eslint happy
+- [ ] get BlockHelper.fromString() to extract tags
