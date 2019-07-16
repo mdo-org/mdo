@@ -53,7 +53,7 @@ easier.
 Examples:
 
 ```
-const BlockHelper = require('@mdo-org/mdo-core/dist/BlockHelper');
+const { BlockHelper } = require('@mdo-org/mdo-core');
 const { INCOMPLETE_TASK } = BlockHelper.TYPES;
 
 const block = { type: INCOMPLETE_TASK, text: '{{type}} Take out the trash\n\n' };
