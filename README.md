@@ -73,8 +73,7 @@ It is generated from this repo's `docs` directory using [Docsify](https://docsif
 You can run Docsify locally with:
 
 ```
-npm i docsify-cli -g
-docsify serve ./docs
+npm run docs
 ```
 
 Note:  

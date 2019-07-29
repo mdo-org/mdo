@@ -85,4 +85,6 @@ Examples:
     @postpone until Monday
 ```
 
+See allowed formats for [start](https://github.com/mdo-org/mdo/blob/master/packages/mdo-plugin-start/allowed_formats.md), [repeat](https://github.com/mdo-org/mdo/blob/master/packages/mdo-plugin-repeat/allowed_formats.md), and [postpone](https://github.com/mdo-org/mdo/blob/master/packages/mdo-plugin-postpone/allowed_formats.md)
+
 [> Installation](/installation/)

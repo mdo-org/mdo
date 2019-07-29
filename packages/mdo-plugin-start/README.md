@@ -27,7 +27,7 @@ mdoStream
 
 Converts the `.start` value from human-readable format into ISO-8601.
 
-The allowed formats are specified [here](./start_tag_formats.md).
+The allowed formats are specified [here](./allowed_formats.md).
 
 Example:
 
