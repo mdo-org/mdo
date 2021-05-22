@@ -1,6 +1,6 @@
 {
   "name": "@mdo-org/mdo-flow-celebrate-victories",
-  "version": "0.2.12",
+  "version": "0.2.13",
   "description": "Live in the moment, but every now and then take the time to cherish all that you've accomplished.",
   "author": "Alexis Hevia <hevia.alexis@gmail.com>",
   "homepage": "https://github.com/mdo-org/mdo#readme",
@@ -24,13 +24,13 @@
     "url": "https://github.com/mdo-org/mdo/issues"
   },
   "dependencies": {
-    "@mdo-org/mdo-core": "^0.2.12",
-    "@mdo-org/mdo-plugin-cleanup-actionable-dates": "^0.2.12",
-    "@mdo-org/mdo-plugin-completed": "^0.2.12",
-    "@mdo-org/mdo-plugin-postpone": "^0.2.12",
-    "@mdo-org/mdo-plugin-repeat": "^0.2.12",
-    "@mdo-org/mdo-plugin-sections": "^0.2.12",
-    "@mdo-org/mdo-plugin-start": "^0.2.12",
+    "@mdo-org/mdo-core": "^0.2.13",
+    "@mdo-org/mdo-plugin-cleanup-actionable-dates": "^0.2.13",
+    "@mdo-org/mdo-plugin-completed": "^0.2.13",
+    "@mdo-org/mdo-plugin-postpone": "^0.2.13",
+    "@mdo-org/mdo-plugin-repeat": "^0.2.13",
+    "@mdo-org/mdo-plugin-sections": "^0.2.13",
+    "@mdo-org/mdo-plugin-start": "^0.2.13",
     "pumpify": "^1.5.1"
   },
   "gitHead": "77b98912f94a71300a7698b805864683da29a45a"
