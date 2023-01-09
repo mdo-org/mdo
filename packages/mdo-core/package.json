@@ -22,7 +22,7 @@
     "lib"
   ],
   "dependencies": {
-    "luxon": "1.27.0",
+    "luxon": "2.5.2",
     "pumpify": "^1.5.1",
     "xregexp": "^4.2.4"
   },
